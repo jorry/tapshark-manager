@@ -22,7 +22,7 @@ function query(sql) {
 }
 
 orderDetailUtils.cardmanagerSelect = async function(callback){
-    var descGetCardId = "SELECT email,created_at,card_count,status,order_id FROM orders ORDER BY created_at ASC;";
+    var descGetCardId = "SELECT email,created_at,card_count,status,order_id FROM orders ORDER BY created_at DESC;";
     query(descGetCardId)
         .then((results) => {
             return results;
